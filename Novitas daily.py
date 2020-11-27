@@ -97,5 +97,41 @@ elif largemuscle=='n':
     largemuscle='He did not complete a large muscle activity today'
 activity=input('What activity did they do for large muscle?:' )
 
+while True:
+    chore=input('Did they complete a chore today? y or n:')
+    if chore not in ('y','n'):
+        print('not an appropriate response please enter y or n')
+        continue
+    else:
+        break
+comchore=''
+if chore=='y':
+    comchore=input('What chore did they complete today?:')
+    chore='He completed his chore today. For his chore he'
+elif chore=='n':
+    chore='He did not complete his chore today'
 
-print(Name,Meals+','+mornteeth+'.',amshower+'.',bedroomclean+'.',school+'.', largemuscle,activity+'.')
+while True:
+    media=input('Was today a media free day? y or n:')
+    if media not in('y', 'n'):
+        print('not an appropriate response please enter y or n')
+        continue
+    else:
+        break
+while True:
+    if media=='y':
+        media=input('Did they get their media today? y or n:')
+        if media not in('y', 'n'):
+            print('not an appropriate response please enter y or n')
+            continue
+        else:
+            break
+        if media=='y':
+            media='He got his media today and spent time after dinner playing on it.'
+        elif media=='n':
+            media=''
+    elif media=='n':
+        media='Today was a media free day and he did not recieve media today'
+
+
+print(Name,Meals+','+mornteeth+'.',amshower+'.',bedroomclean+'.',school+'.', largemuscle,activity+'.',chore,comchore+'.')
