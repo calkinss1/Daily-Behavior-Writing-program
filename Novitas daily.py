@@ -84,6 +84,8 @@ def daily():
     elif school==0:
         school='He did not go to school today'
 
+    activity=''
+
     while True:
         largemuscle=input('Did they complete a large muscle activity for 1 hour today? y or n:')
         if largemuscle not in ('y','n'):
@@ -93,10 +95,11 @@ def daily():
             break
     if largemuscle=='y':
         largemuscle='He completed his large muscle today, for large muscle he'
+        activity=input('What activity did they do for large muscle?:' )
 
     elif largemuscle=='n':
         largemuscle='He did not complete a large muscle activity today'
-    activity=input('What activity did they do for large muscle?:' )
+    #activity=input('What activity did they do for large muscle?:' )
 
     while True:
         chore=input('Did they complete a chore today? y or n:')
@@ -128,7 +131,7 @@ def daily():
             else:
                 break
         if media=='y':
-            media='He got his media today and spent time after dinner playing on it.'
+            media='He got his media today and spent time after dinner playing on it'
         elif media=='n':
                 media=''
     elif media=='y':
