@@ -1,5 +1,6 @@
 def daily():
     Name=input('Student Name:')
+    print()
 
     while True:
             try:
@@ -17,6 +18,7 @@ def daily():
         Meals='ate only 1 meal today'
     elif Meals==0:
         Meals='did not eat any meals today'
+    print()
 
     while True:
         mornteeth=input('Did student brush their teeth this morning? y or n:')
@@ -29,6 +31,7 @@ def daily():
         mornteeth='he brushed his teeth this morning'
     elif mornteeth== 'n':
         mornteeth='he did not brush his teeth this morning'
+    print()
 
     while True:
         amshower=input('Did the student shower this morning? y or n:')
@@ -40,6 +43,7 @@ def daily():
     if amshower=='y':
         amshower='He showered this morning'
     elif amshower=='n':
+        print()
         while True:
             amshower= input('Did the student shower this evening? y or n:' )
             if amshower not in ('y','n'):
@@ -50,6 +54,7 @@ def daily():
             amshower='He showered this evening'
         if amshower=='n':
             amshower=='He did not shower today'
+    print()
 
     while True:
 
@@ -63,6 +68,7 @@ def daily():
         bedroomclean='He cleaned his bedroom today'
     elif bedroomclean=='n':
         bedroomclean='He did not clean his bedroom today'
+    print()
 
     while True:
             try:
@@ -83,6 +89,7 @@ def daily():
         school='He was briefly at school and minimally participated'
     elif school==0:
         school='He did not go to school today'
+    print()
 
     activity=''
 
@@ -95,11 +102,12 @@ def daily():
             break
     if largemuscle=='y':
         largemuscle='He completed his large muscle today, for large muscle he'
+        print()
         activity=input('What activity did they do for large muscle?:' )
 
     elif largemuscle=='n':
         largemuscle='He did not complete a large muscle activity today'
-    #activity=input('What activity did they do for large muscle?:' )
+    print()
 
     while True:
         chore=input('Did they complete a chore today? y or n:')
@@ -110,10 +118,12 @@ def daily():
             break
     comchore=''
     if chore=='y':
+        print()
         comchore=input('What chore did they complete today?:')
         chore='He completed his chore today. For his chore he'
     elif chore=='n':
         chore='He did not complete his chore today'
+    print()
 
     while True:
         media=input('Was today a media free day? y or n:')
@@ -123,6 +133,7 @@ def daily():
         else:
             break
     if media=='n':
+        print()
         while True:
             media=input('Did they get their media today? y or n:')
             if media not in('y', 'n'):
@@ -136,6 +147,7 @@ def daily():
                 media=''
     elif media=='y':
         media='Today was a media free day and he did not recieve media today'
+    print()
 
     while True:
         add=input('Would you like to add additional behaviors? y or n:')
@@ -147,8 +159,10 @@ def daily():
         add=input('Please enter additional behaviors(paragraphs):')
     elif add=='n':
         add=''
+    print()
 
     print(Name,Meals+','+mornteeth+'.',amshower+'.',bedroomclean+'.',school+'.', largemuscle,activity+'.',chore,comchore+'.', media+'.', add)
+    print()
 
 while True:
     daily()
